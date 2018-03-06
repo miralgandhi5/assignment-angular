@@ -1,0 +1,11 @@
+<div>
+<form #loginForm = "ngForm" (submit)= submitForm()>
+  Email: <input required type="text" name="email" #email = "ngModel"  [(ngModel)]="emailId" title="email"><br>
+  <div [hidden]="email.pristine" *ngIf="email.invalid" >Email is not valid</div><br>
+  Password: <input required type="password" name="pswd"  minlength="5" #pass = "ngModel" [(ngModel)]="password" title="password">
+  <div [hidden]="pass.pristine" *ngIf="pass.invalid" >Password is not valid</div><br>
+  <button [disabled] = "loginForm.invalid" type="submit">Login</button>
+
+</form>
+
+</div>

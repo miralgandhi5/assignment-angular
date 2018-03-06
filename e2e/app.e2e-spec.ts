@@ -7,7 +7,7 @@ describe('assignment-angular App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should displayList welcome message', () => {
     page.navigateTo();
     expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
